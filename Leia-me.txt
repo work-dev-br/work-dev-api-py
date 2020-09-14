@@ -1,6 +1,8 @@
 https://docs.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=cmd
 
+git push -u origin master
 az login
+# pip install requests
 
 Setando o environment:
 ---------------------
@@ -17,5 +19,27 @@ flask run
 http://127.0.0.1:5000/
 
 
-
+Initial deploy:
 az webapp up --sku F1 -n <app-name>
+az webapp up --sku F1 -n work-dev-api-py
+
+Redeploy:
+az webapp up
+
+
+
+
+DEPLOY RESPONSE:
+---------------
+{
+  "URL": "http://work-dev-api-py.azurewebsites.net",
+  "appserviceplan": "nivaldohydalgo_asp_Linux_centralus_0",
+  "location": "centralus",
+  "name": "work-dev-api-py",
+  "os": "Linux",
+  "resourcegroup": "nivaldohydalgo_rg_Linux_centralus",
+  "runtime_version": "python|3.7",
+  "runtime_version_detected": "-",
+  "sku": "FREE",
+  "src_path": "F:\\devWork\\workdev\\work-dev-api-py"
+}

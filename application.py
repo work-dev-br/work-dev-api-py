@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def root():
     except:
         return geraResponse(400, "Não foi possível abrir o arquivo index.html.")
 
-@app.route("/groups", methods=["GET"])
+@app.route("/groups")
 def groups():
     groupsList = { "groups": [
         { 
@@ -40,7 +40,7 @@ def groups():
     ] }
     return geraResponse( 200, "Consulta concluída com sucesso.", groupsList ) 
 
-@app.route("/tools", methods=["GET"])
+@app.route("/tools")
 def tools():
     toolsList = { "tools": [
         { 
