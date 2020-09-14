@@ -1,0 +1,21 @@
+https://docs.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=cmd
+
+az login
+
+Setando o environment:
+---------------------
+python3 -m venv env
+env\scripts\activate
+## pip install -r requirements.txt
+
+
+Rodando a aplicação local:
+-------------------------
+env\scripts\activate
+SET FLASK_APP=application.py
+flask run
+http://127.0.0.1:5000/
+
+
+
+az webapp up --sku F1 -n <app-name>
