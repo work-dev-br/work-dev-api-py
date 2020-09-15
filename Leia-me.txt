@@ -15,6 +15,9 @@ Rodando a aplicação local:
 -------------------------
 env\scripts\activate
 SET FLASK_APP=application.py
+
+set FLASK_APP=application:work-dev-api-py
+
 flask run
 http://127.0.0.1:5000/
 
@@ -43,3 +46,14 @@ DEPLOY RESPONSE:
   "sku": "FREE",
   "src_path": "F:\\devWork\\workdev\\work-dev-api-py"
 }
+
+
+requirements.txt
+----------------
+Valor original de Flask==1.0.2
+
+
+
+
+Paginas exemplos:
+https://flask.palletsprojects.com/en/1.1.x/quickstart/
